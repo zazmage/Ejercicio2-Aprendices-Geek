@@ -1,0 +1,41 @@
+body {
+  background-color: lightsteelblue;
+}
+
+.title-text {
+  width: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.welcome-image {
+  display: block;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+
+footer {
+  color: white;
+  background-color: black;
+  margin: 0;
+}
+
+.card-body {
+  background-color: rgb(130, 169, 221);
+}
+
+.img-thumbnail {
+  transition: 0.3s;
+}
+
+.img-thumbnail:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+.img-thumbnail:active {
+  cursor: pointer;
+  transform: scale(0.95);
+}
