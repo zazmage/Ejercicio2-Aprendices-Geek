@@ -1,5 +1,7 @@
 body {
   background-color: lightsteelblue;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .title-text {
@@ -14,6 +16,8 @@ body {
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgb(130, 169, 221);
 }
 
 footer {
