@@ -31,15 +31,17 @@ div.addEventListener("click", (e) => {
 div.addEventListener("click", (e) => {
   if (e.target.classList.contains("btn-dark")) {
     const findId = e.target.dataset.id;
-    let purchase = data.find((p) => p.id == findId);
-    let shoppingCart = [];
+    let purchase = data.find((p) => p.id == findId); //Objeto
+    let shoppingCart = []; //Array
     if (localStorage.getItem("Carrito")) {
-      shoppingCart = JSON.parse(localStorage.getItem("Carrito"));
-      shoppingCart.push(purchase);
-      localStorage.setItem("Carrito", JSON.stringify(shoppingCart));
+      //Comprueba si hay productos añadidos al carrito, si hay objetos en el local storage
+      shoppingCart = JSON.parse(localStorage.getItem("Carrito")); //Bajando
+      shoppingCart.push(purchase); //Añadiendo contenido nuevo
+      localStorage.setItem("Carrito", JSON.stringify(shoppingCart)); //Reescribiendo
     } else {
-      shoppingCart.push(purchase);
-      localStorage.setItem("Carrito", JSON.stringify(shoppingCart));
+      //En caso de que no se haya comprado nada
+      shoppingCart.push(purchase); //Añadir por primera vez contenido
+      localStorage.setItem("Carrito", JSON.stringify(shoppingCart)); //Escribir
     }
   }
 });
